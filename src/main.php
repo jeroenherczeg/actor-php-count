@@ -1,9 +1,14 @@
 <?php
-require './vendor/autoload.php';
+
+namespace App;
+
+use GuzzleHttp\Client;
+
+require 'vendor/autoload.php';
 
 $url = 'https://api.apify.com/v2/key-value-stores/' . $_ENV['APIFY_DEFAULT_KEY_VALUE_STORE_ID'] . '/records/' . $_ENV['APIFY_INPUT_KEY'];
 print($url);
-$client = new GuzzleHttp\Client();
+$client = new Client();
 $res = $client->request('GET', $url);
 print($res->getStatusCode());
 // "200"
