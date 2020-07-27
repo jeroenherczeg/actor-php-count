@@ -23,12 +23,12 @@ $client->request('GET', $url, ['sink' => $path . $file]);
 //file_put_contents($file, file_get_contents($url));
 
 $zip = new ZipArchive;
-//$res = $zip->open($file);
-//if ($res === TRUE) {
+$res = $zip->open($path . $file);
+if ($res === TRUE) {
 //    // extract it to the path we determined above
-//    $zip->extractTo($path);
-//    $zip->close();
-//    var_dump(scandir($path));
-//} else {
-//    echo "Doh! I couldn't open $file";
-//}
+    $zip->extractTo('/tmp/code');
+    $zip->close();
+    var_dump(scandir('/tmp/code'));
+} else {
+    echo "Doh! I couldn't open $file";
+}
