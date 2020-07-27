@@ -1,17 +1,15 @@
 <?php
-var_dump(scandir('./'));
-
 require './vendor/autoload.php';
 
 $url = 'https://api.apify.com/v2/key-value-stores/' . $_ENV['APIFY_DEFAULT_KEY_VALUE_STORE_ID'] . '/records/' . $_ENV['APIFY_INPUT_KEY'];
 
 $client = new GuzzleHttp\Client();
 $res = $client->request('GET', $url);
-echo $res->getStatusCode();
+print($res->getStatusCode());
 // "200"
-echo $res->getHeader('content-type')[0];
+print($res->getHeader('content-type')[0]);
 // 'application/json; charset=utf8'
-echo $res->getBody();
+print($res->getBody());
 //$url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e904597e3bd9c4685c53e0e333feea';
 //$file = 'tmp.zip';
 //$path = '/tmp/code';
