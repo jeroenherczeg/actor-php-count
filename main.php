@@ -1,4 +1,5 @@
 <?php
+scandir('./');
 
 require './vendor/autoload.php';
 
