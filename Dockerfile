@@ -1,10 +1,18 @@
 FROM php:7.4-cli
 
-RUN apt-get update && \
-    apt-get install -y \
-        libzip-dev
-        
-RUN docker-php-ext-install zip
+RUN apt-get install -y \
+        git \
+        tree \
+        vim \
+        wget \
+        subversion
+
+#install some base extensions
+RUN apt-get install -y \
+        zlib1g-dev \
+        zip \
+  && docker-php-ext-install zip
+
 
 COPY . .
 
