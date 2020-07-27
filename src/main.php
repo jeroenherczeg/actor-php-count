@@ -22,7 +22,7 @@ $client->request('GET', $url, ['sink' => $path . $file]);
 
 //file_put_contents($file, file_get_contents($url));
 
-$zip = new ZipArchive;
+$zip = new \ZipArchive;
 $res = $zip->open($path . $file);
 if ($res === TRUE) {
 //    // extract it to the path we determined above
