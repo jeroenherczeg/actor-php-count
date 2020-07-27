@@ -1,5 +1,5 @@
 <?php
-scandir('./');
+echo scandir('./');
 
 require './vendor/autoload.php';
 
