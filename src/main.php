@@ -10,6 +10,7 @@ $url = 'https://api.apify.com/v2/key-value-stores/' . $_ENV['APIFY_DEFAULT_KEY_V
 $client = new Client();
 $response = $client->request('GET', $url);
 $content = (string) $response->getBody();
+$content = json_decode($content);
 var_dump($content);
 
 //$url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e904597e3bd9c4685c53e0e333feea';
