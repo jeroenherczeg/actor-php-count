@@ -3,6 +3,7 @@
 namespace App;
 
 use GuzzleHttp\Client;
+use Symfony\Component\Finder\Finder;
 
 require 'vendor/autoload.php';
 
@@ -29,6 +30,10 @@ if ($res === TRUE) {
     $zip->extractTo('/tmp/code');
     $zip->close();
     var_dump(scandir('/tmp/code'));
+    $finder = new Finder();
+// find all files in the current directory
+    $finder->files()->in('/tmp/code')->name('*.php');
+    var_dump(count($finder));
 } else {
     echo "Doh! I couldn't open $file";
 }

@@ -1,6 +1,7 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/finder": "^5.1"
     },
     "autoload": {
         "psr-4": {

@@ -14,6 +14,10 @@ class ComposerStaticInit89746a41472a6bfc24336cb16440c1cc
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Component\\Finder\\' => 25,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -25,9 +29,17 @@ class ComposerStaticInit89746a41472a6bfc24336cb16440c1cc
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -47,6 +59,10 @@ class ComposerStaticInit89746a41472a6bfc24336cb16440c1cc
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
