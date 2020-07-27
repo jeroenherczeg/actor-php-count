@@ -8,8 +8,8 @@ require 'vendor/autoload.php';
 
 $url = 'https://api.apify.com/v2/key-value-stores/' . $_ENV['APIFY_DEFAULT_KEY_VALUE_STORE_ID'] . '/records/' . $_ENV['APIFY_INPUT_KEY'];
 $client = new Client();
-$res = $client->request('GET', $url);
-print(json_decode($res->getBody()->getContents()));
+$response = $client->request('GET', $url);
+print(json_decode($response->getBody()));
 
 //$url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e904597e3bd9c4685c53e0e333feea';
 //$file = 'tmp.zip';
