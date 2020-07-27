@@ -13,10 +13,12 @@ $content = (string) $response->getBody();
 $content = json_decode($content);
 var_dump($content);
 
-//$url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e904597e3bd9c4685c53e0e333feea';
-//$file = 'tmp.zip';
-//$path = '/tmp/code';
-//
+
+$url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e904597e3bd9c4685c53e0e333feea';
+$file = 'tmp.zip';
+$path = '/';
+
+$client->request('GET', $url, ['sink' => $path . $file]);
 //file_put_contents($file, file_get_contents($url));
 //
 //
