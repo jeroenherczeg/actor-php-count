@@ -1,5 +1,5 @@
 FROM php:7.4-cli
 
-COPY ./* ./
+COPY . .
 
 CMD [ "php", "./main.php" ]
