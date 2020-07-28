@@ -19,7 +19,7 @@ $url = 'https://api.github.com/repos/doctrine/instantiator/zipball/f350df0268e90
 $file = 'tmp.zip';
 $path = '/';
 
-$client->request('GET', $content['repo'], ['sink' => $path . $file]);
+$client->request('GET', $content->url, ['sink' => $path . $file]);
 
 //file_put_contents($file, file_get_contents($url));
 
